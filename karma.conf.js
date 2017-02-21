@@ -4,7 +4,6 @@ module.exports = function(config) {
 
     files: [
       // all files ending in "test"
-      './node_modules/phantomjs-polyfill/bind-polyfill.js',
       'test/test.js'
       // each file acts as entry point for the webpack configuration
     ],
@@ -62,10 +61,16 @@ module.exports = function(config) {
       require("istanbul-instrumenter-loader"),
       require("karma-mocha"),
       require("karma-coverage"),
-      require("karma-phantomjs-launcher"),
+      require("karma-chrome-launcher"),
       require("karma-spec-reporter")
     ],
 
-    browsers: ['PhantomJS']
+    browsers: ['ChromeNoSandbox'],
+    customLaunchers: {
+        ChromeNoSandbox: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    }
   });
 };
