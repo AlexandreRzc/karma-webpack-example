@@ -11,8 +11,7 @@ ADD . workspace
 WORKDIR workspace
 RUN npm install
 
-COPY entrypoint.sh /
-RUN chmod a+x /entrypoint.sh
+
 
 #ENTRYPOINT ["entrypoint.sh"]
 CMD ["/bin/bash"]
