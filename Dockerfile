@@ -14,4 +14,4 @@ RUN npm install
 
 
 #ENTRYPOINT ["entrypoint.sh"]
-CMD ["npm test"]
+CMD ["npm", "test"]
