@@ -13,6 +13,6 @@ RUN npm install
 
 RUN chmod +x ./entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+#ENTRYPOINT ["./entrypoint.sh"]
 #CMD ["npm", "test"]
-CMD ["sh", "/sleep.sh"]
+#CMD ["sh", "/sleep.sh"]
