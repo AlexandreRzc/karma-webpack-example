@@ -62,10 +62,16 @@ module.exports = function(config) {
       require("istanbul-instrumenter-loader"),
       require("karma-mocha"),
       require("karma-coverage"),
-      require("karma-phantomjs-launcher"),
+      require("karma-chrome-launcher"),
       require("karma-spec-reporter")
     ],
 
-    browsers: ['PhantomJS']
+    browsers: ['ChromeNoSandbox'],
+    customLaunchers: {
+        ChromeNoSandbox: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    }
   });
 };
