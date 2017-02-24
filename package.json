@@ -4,7 +4,7 @@
   "description": "Karma + Webpack + Mocha + Chai + Istanbul",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
+    "test": "node ./node_modules/karma/bin/karma start --single-run --browsers ChromeNoSandbox",
     "test-gulp": "gulp"
   },
   "repository": {
