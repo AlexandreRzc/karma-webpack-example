@@ -68,7 +68,8 @@ module.exports = function(config) {
       require("karma-mocha"),
       require("karma-coverage"),
       require("karma-chrome-launcher"),
-      require("karma-spec-reporter")
+      require("karma-spec-reporter"),
+      require("karma-junit-reporter")
     ],
 
     browsers: ['ChromeNoSandbox'],
