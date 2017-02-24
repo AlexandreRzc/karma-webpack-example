@@ -17,7 +17,7 @@ module.exports = function(config) {
       'test/test.js': ['webpack']
     },
 
-        reporters: ['spec', 'coverage', 'junit'],
+      reporters: ['spec', 'coverage', 'junit'],
 
 
       junitReporter: {
@@ -69,7 +69,7 @@ module.exports = function(config) {
       require("karma-coverage"),
       require("karma-chrome-launcher"),
       require("karma-spec-reporter"),
-      require("karma-junit-reporter"),
+        require("karma-junit-reporter"),
       require("karma-html-reporter")
     ],
 
