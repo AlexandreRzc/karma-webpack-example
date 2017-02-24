@@ -4,7 +4,6 @@ module.exports = function(config) {
 
     files: [
       // all files ending in "test"
-      './node_modules/phantomjs-polyfill/bind-polyfill.js',
       'test/test.js'
       // each file acts as entry point for the webpack configuration
     ],
@@ -18,7 +17,13 @@ module.exports = function(config) {
       'test/test.js': ['webpack']
     },
 
-    reporters: ['spec', 'coverage'],
+      reporters: ['spec', 'coverage', 'junit'],
+
+
+      junitReporter: {
+
+          outputFile: 'build/junit/test-results.xml',
+      },
 
     coverageReporter: {
 
