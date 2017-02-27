@@ -26,7 +26,7 @@ module.exports = function (config) {
         },
 
         coverageReporter: {
-
+            type : 'cobertura',
             dir: 'build/coverage/',
             reporters: [
                 {type: 'html'},
