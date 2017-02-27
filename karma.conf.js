@@ -1,7 +1,7 @@
 var webpack = require("webpack");
 module.exports = function (config) {
     config.set({
-
+        basePath: '',
         files: [
             // all files ending in "test"
             'test/test.js'
