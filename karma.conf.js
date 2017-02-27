@@ -16,7 +16,7 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            'test/test.js': ['webpack']
+            'test/test.js': ['coverage']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -29,9 +29,6 @@ module.exports = function (config) {
 
         coverageReporter: {
             dir: 'build/coverage/',
-            instrumenterOptions: {
-                istanbul: { noCompact: true }
-            },
             reporters: [
                 {type: 'html'},
                 {type: 'text'},
