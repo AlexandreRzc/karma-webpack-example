@@ -5,7 +5,8 @@ module.exports = function (config) {
         files: [
             // all files ending in "test"
             'test/test.js',
-            'test/Example/*.js'
+            'test/Example/*.js',
+            'src/**/*.js'
 
             // each file acts as entry point for the webpack configuration
         ],
@@ -17,7 +18,6 @@ module.exports = function (config) {
             // only specify one entry point
             // and require all tests in there
             'test/test.js': ['webpack'],
-            'test/Example/*.js': ['webpack'],
             'src/**/*.js': ['coverage'],
         },
 
