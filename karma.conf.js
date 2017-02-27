@@ -18,7 +18,7 @@ module.exports = function (config) {
             // only specify one entry point
             // and require all tests in there
             'test/test.js': ['webpack'],
-            '**/test/Example/*.js': ['coverage']
+            '**/test/Example/*.js': ['webpack', 'coverage']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -31,6 +31,7 @@ module.exports = function (config) {
 
         coverageReporter: {
             dir: 'build/coverage/',
+            includeAllSources: true,
             reporters: [
                 {type: 'html'},
                 {type: 'text'},
