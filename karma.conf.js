@@ -4,9 +4,9 @@ module.exports = function (config) {
         basePath: '',
         files: [
             // all files ending in "test"
-            'test/test.js',
-            'test/Example/*.js',
+            //'test/test.js',
             'src/**/*.js'
+            'test/**/*.js'
 
             // each file acts as entry point for the webpack configuration
         ],
