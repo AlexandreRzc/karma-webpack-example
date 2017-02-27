@@ -16,7 +16,7 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            'test/Example/*.js': 'coverage',
+            'test/Example/hexColorLuminance_test.js': 'coverage',
             'test/test.js': ['webpack']
         },
 
