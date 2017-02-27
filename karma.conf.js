@@ -18,7 +18,7 @@ module.exports = function (config) {
             // only specify one entry point
             // and require all tests in there
             'test/test.js': ['webpack'],
-            '**/test/Example/*.js': ['webpack', 'coverage']
+            '**/test/Example/*.js': ['webpack']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
