@@ -19,6 +19,7 @@ module.exports = function (config) {
             // and require all tests in there
             'test/test.js': ['webpack'],
             'src/**/*.js': ['coverage'],
+            '**/test/Example/*.js': ['coverage'],
         },
 
         reporters: ['spec', 'junit', 'coverage'],
