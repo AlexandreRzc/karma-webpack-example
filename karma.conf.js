@@ -4,8 +4,7 @@ module.exports = function (config) {
 
         files: [
             // all files ending in "test"
-            'test/test.js',
-            'test/**/*.js'
+            'test/test.js'
             
             
             // each file acts as entry point for the webpack configuration
