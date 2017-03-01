@@ -37,6 +37,10 @@ module.exports = function (config) {
         },
 
         webpack: {
+            node : {
+                fs: 'empty'
+            },
+            
             // webpack configuration
             module: {
                 loaders: [
@@ -49,6 +53,11 @@ module.exports = function (config) {
                     loader: 'istanbul-instrumenter'
                 }]
             },
+
+            webpackMiddleware: {
+                noInfo: true
+            },
+            
             resolve: {
                 modulesDirectories: [
                     "",
@@ -72,6 +81,11 @@ module.exports = function (config) {
             require("karma-spec-reporter"),
             require("karma-junit-reporter")
         ],
+        
+        colors: true,
+        logLevel: config.LOG_INFO,
+        autoWatch: true,
+        singleRun: false        
 
         browsers: ['ChromeNoSandbox'],
         customLaunchers: {
