@@ -74,8 +74,7 @@ module.exports = function (config) {
             require("karma-coverage"),
             require("karma-chrome-launcher"),
             require("karma-spec-reporter"),
-            require("karma-junit-reporter"),
-            require("requirejs")
+            require("karma-junit-reporter")
         ],
        
 
