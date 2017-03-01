@@ -4,7 +4,8 @@ module.exports = function (config) {
         basePath: '',
         files: [
             // all files ending in "test"
-            'test/test.js'
+            'test/test.js',
+            'src/**/*.js'
 
             // each file acts as entry point for the webpack configuration
         ],
@@ -15,7 +16,8 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            'test/test.js': ['webpack']
+            //'test/test.js': ['webpack']
+            'src/**/*.js': ['coverage']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -76,7 +78,12 @@ module.exports = function (config) {
             require("karma-spec-reporter"),
             require("karma-junit-reporter")
         ],
-       
+
+        coverageReporter: {
+            instrumenterOptions: {
+                istanbul: { noCompact: true }
+            }
+        },
 
         browsers: ['ChromeNoSandbox'],
         customLaunchers: {
