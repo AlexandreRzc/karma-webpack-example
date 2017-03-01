@@ -15,7 +15,7 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            'test/Example/*.js': ['webpack']
+            'test/Example/*.js': ['webpack', 'coverage']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -37,9 +37,7 @@ module.exports = function (config) {
         },
 
         webpack: {
-            node : {
-                fs: 'empty'
-            },
+
             
             // webpack configuration
             module: {
@@ -67,10 +65,7 @@ module.exports = function (config) {
             }
         },
 
-        webpackMiddleware: {
-            // webpack-dev-middleware configuration
-            noInfo: true
-        },
+
 
         plugins: [
             require("karma-webpack"),
@@ -81,11 +76,7 @@ module.exports = function (config) {
             require("karma-spec-reporter"),
             require("karma-junit-reporter")
         ],
-        
-        colors: true,
-        logLevel: config.LOG_INFO,
-        autoWatch: False,
-        singleRun: false,        
+       
 
         browsers: ['ChromeNoSandbox'],
         customLaunchers: {
