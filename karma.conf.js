@@ -4,7 +4,7 @@ module.exports = function (config) {
         basePath: '',
         files: [
             // all files ending in "test"
-            'src/Example/*.js'
+            'test/test.js'
 
             // each file acts as entry point for the webpack configuration
         ],
@@ -15,7 +15,7 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            'src/Example/*.js': ['webpack', 'coverage']
+            'test/test.js': ['webpack', 'coverage']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
