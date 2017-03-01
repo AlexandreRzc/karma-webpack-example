@@ -10,7 +10,7 @@ module.exports = function (config) {
         ],
 
         // frameworks to use
-        frameworks: ['mocha'],
+        frameworks: ['mocha', 'requirejs'],
 
         preprocessors: {
             // only specify one entry point
