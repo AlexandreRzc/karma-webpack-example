@@ -84,7 +84,7 @@ module.exports = function (config) {
         
         colors: true,
         logLevel: config.LOG_INFO,
-        autoWatch: true,
+        autoWatch: False,
         singleRun: false,        
 
         browsers: ['ChromeNoSandbox'],
